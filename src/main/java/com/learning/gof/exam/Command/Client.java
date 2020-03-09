@@ -1,10 +1,10 @@
 package com.learning.gof.exam.Command;
 
-public class Client<T> {
-	private T checkCommand;
+public class Client {
+	private Command checkCommand;
 	private Result currentResult = new Result(Status.PENDING);
 	
-	public Client(T command) {
+	public Client(Command command) {
 		this.checkCommand = command;
 	}
 	public void setCurrentResult(Result result) {
@@ -13,10 +13,10 @@ public class Client<T> {
 	public Result getCurrentResult() {
 		return currentResult;
 	}
-	public void setCheckCommand(T command) {
+	public void setCheckCommand(Command command) {
 		this.checkCommand = command;
 	}
-	public T getCheckCommand() {
+	public Command getCheckCommand() {
 		return checkCommand;
 	}
 }
